@@ -1,5 +1,5 @@
 class Room
-	attr_accessor :exit, :description
+	attr_accessor :exit, :description, :objects
 
 	def initialize(exit, description)
 		@exit = exit
@@ -25,6 +25,7 @@ class Game
 		puts @rooms[@position].description
 		puts "Where are you going? (N,E,S,W)"
 		puts "There is an exit at " + @rooms[@position].exit + " direction."
+		puts "hey there's a " + @rooms[@position].objects[@position]
 		print ">: "
 		answer = gets.chomp
 		check_command(answer.upcase)
@@ -35,6 +36,7 @@ class Game
 			return exit
 		elsif  answer == @rooms[@position].exit
 			@position += 1
+		
 			return start
 		else puts "Wrong way"
 			puts "Choose another one"

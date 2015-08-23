@@ -1,12 +1,13 @@
 classes
 
-	*ReadTitlesFile
+	*FileReader
 
 	*ShowMovieRatings
 
 
 
 
-Methods on ReadTitlesFile
+Methods on FileReader
 
-reader_
+#Leer el archivo .txt
+#
